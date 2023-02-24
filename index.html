@@ -26,7 +26,7 @@
 	</main>
 	<div class="modal" id="modal">
 		<div class="close-modal-btn-container">
-			<button class="modal-close-btn" id="modal-close-btn">X</button>
+			<button class="modal-close-btn" id="modal-close-btn" disabled>X</button>
 		</div>
 		<div class="modal-inner" id="modal-inner">
 			<h2>We ❤️ Your Data!</h2>
@@ -35,8 +35,8 @@
 				<input type="text" id="modal-name" name="modal-name" placeholder="Enter your full name">	
 				<input type="email" id="modal-email" name="modal-email" placeholder="Enter your email">		
 				<div class="modal-choice-btns" id="modal-choice-btns">
-					<button class="modal-btn" type="submit">Accept</button>
-					<button class="modal-btn">Decline</button>
+					<button class="modal-btn" type="submit" id="accept">Accept</button>
+					<button class="modal-btn" id="decline">Decline</button>
 				</div>	
 			</form>
 		</div>

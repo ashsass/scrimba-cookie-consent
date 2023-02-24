@@ -2,6 +2,8 @@ const modal = document.getElementById('modal')
 const modalClose = document.getElementById('modal-close-btn')
 const consentForm = document.getElementById('consent-form')
 const modalText = document.getElementById('modal-text')
+const modalCloseBtn = document.getElementById('modal-close-btn')
+const declineBtn = document.getElementById('decline')
 
 setTimeout(function(){
     modal.style.display = 'inline'
@@ -9,6 +11,11 @@ setTimeout(function(){
 
 modalClose.addEventListener('click', function() {
     modal.style.display = 'none'
+})
+
+declineBtn.addEventListener('mouseenter', function(){
+    const modalBtnsContainer = document.getElementById('modal-choice-btns')
+    modalBtnsContainer.classList.toggle('modal-choice-btns-reverse')
 })
 
 consentForm.addEventListener('submit', function(e){
@@ -36,15 +43,6 @@ consentForm.addEventListener('submit', function(e){
             <div class="idiot-gif">
                 <img src="images/pirate.gif">
             </div>`
-        console.log(consentFormData)
+        modalCloseBtn.disabled = false
     }, 3000)
 })
-/*   
-Challenge: 
-1. Create a const to store the user's name and
-   use a FormData method to extract the 
-   submitted name from the FormData object.
-2. Insert the user's name into the HTML string
-   that contains the final message we show our
-   users.
-*/ 
